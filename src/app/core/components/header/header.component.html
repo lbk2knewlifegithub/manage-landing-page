@@ -1,0 +1,28 @@
+<div class='container mt-10 mx-auto'>
+  <nav [class.opacity-0]='isActiveModal' class='flex justify-between items-center'>
+    <!--  logo-->
+    <div>
+      <img src='/assets/images/logo.svg' alt='Logo'>
+    </div>
+    <!--  end logo-->
+
+    <ul class='gap-8 font-medium hidden lg:flex'>
+      <li><a class='hover:text-accent' href='#'>Pricing</a></li>
+      <li><a class='hover:text-accent' href='#'>Product</a></li>
+      <li><a class='hover:text-accent' href='#'>About Us</a></li>
+      <li><a class='hover:text-accent' href='#'>Careers</a></li>
+      <li><a class='hover:text-accent' href='#'>Community</a></li>
+    </ul>
+
+    <div class='hidden lg:block'>
+      <a class='btn btn-primary text-base' href='#'>Get Started</a>
+    </div>
+
+    <!--  hamburger menu-->
+    <div class='cursor-pointer lg:hidden' (click)='isActiveModal=true'>
+      <img src='/assets/images/icon-hamburger.svg' alt='Hamburger'>
+    </div>
+    <!--  end hamburger menu-->
+
+  </nav>
+</div>
