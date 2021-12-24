@@ -22,7 +22,7 @@ import {
           />
 
           <!-- errors -->
-          <div class="ml-2 mt-2 text-sm text-red-600">
+          <div class="ml-2 mt-2 text-sm text-red-600 italic">
             <p *ngIf="isEmailInvalid">Email invalid.</p>
             <p *ngIf="isEmailRequired">Email is required.</p>
           </div>

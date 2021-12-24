@@ -29,7 +29,7 @@
   }
 
   input[type="email"] {
-    @apply text-fill border-2 border-transparent focus:border-primary focus:ring-2 focus:ring-primary;
+    @apply text-fill border-2 border-transparent focus:border-primary focus:ring-0;
   }
 }
 
@@ -41,7 +41,7 @@
 
   //CUSTOM APPLY HERE
   .btn {
-    @apply text-xs inline-block rounded-full px-8 py-4 font-black tracking-wide sm:text-base lg:text-base shadow-lg hover:opacity-70 disabled:opacity-70;
+    @apply duration-500 text-xs inline-block rounded-full px-8 py-4 font-black tracking-wide sm:text-base lg:text-base shadow-lg hover:opacity-70 disabled:opacity-70 focus:ring-0;
   }
 
   .btn-primary {
@@ -61,7 +61,7 @@
     display: inline-block;
     overflow: hidden;
     padding-bottom: 0.1rem;
-    @apply duration-200 hover:text-gray-500 hover:tracking-wider;
+    @apply duration-300 hover:text-gray-500 hover:tracking-wider;
 
     &:hover:before {
       left: 0;

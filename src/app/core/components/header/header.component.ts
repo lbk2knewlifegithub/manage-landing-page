@@ -34,5 +34,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   `,
 })
 export class HeaderComponent {
-  openModal = true;
+  openModal = false;
 }

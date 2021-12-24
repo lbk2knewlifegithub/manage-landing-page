@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'lbk-pattern-top',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="absolute top-0 left-0 h-screen w-screen pointer-events-none">
+    <div class="absolute top-0 left-0 h-screen w-screen pointer-events-none z-[-1]">
       <div class="relative h-full mx-auto max-w-[1440px] overflow-x-hidden overflow-y-hidden">
         <!-- pattern intro  top -->
         <div
