@@ -4,8 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'lbk-root',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="container relative">
-      <!-- <img
+    <!-- <img
         class="absolute right-0 top-0 -translate-y-1/4 z-[-1]"
         src="/assets/images/bg-tablet-pattern.svg"
         alt=""
@@ -17,14 +16,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         alt=""
       /> -->
 
-      <lbk-header></lbk-header>
+    <lbk-header></lbk-header>
 
-      <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 
-      <!--footer-->
-      <!-- <lbk-footer></lbk-footer> -->
-      <!--end footer-->
-    </div>
+    <!--footer-->
+    <lbk-footer></lbk-footer>
+    <!--end footer-->
   `,
 })
 export class AppComponent {}

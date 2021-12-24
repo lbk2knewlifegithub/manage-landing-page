@@ -1,0 +1,41 @@
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
+@Component({
+  selector: 'lbk-cta',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: `
+    <div class="relative text-white bg-primary py-32 ">
+      <!--    Background mobile-->
+      <img
+        class="absolute top-0 left-0 h-full lg:hidden"
+        src="/assets/images/bg-simplify-section-mobile.svg"
+        alt="Background"
+      />
+      <!--    end Background mobile-->
+
+      <!--    Background desktop-->
+      <img
+        class="absolute top-0 left-0 h-full w-full hidden lg:block"
+        src="/assets/images/bg-simplify-section-desktop.svg"
+        alt="Background"
+      />
+      <!--    end [ sBackground desktop-->
+
+      <div class="relative container grid gap-8 place-items-center">
+        <h2
+          class="text-inverted font-bold text-4xl text-center lg:text-4xl lg:text-left"
+        >
+          Simplify how <br />
+          your team works todays.
+        </h2>
+
+        <!-- get started button -->
+        <a class="btn btn-primary-inverted !text-primary" href="#"
+          >Get started</a
+        >
+        <!-- end get started button -->
+      </div>
+    </div>
+  `,
+})
+export class CtaComponent {}

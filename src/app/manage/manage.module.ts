@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {
+  CtaComponent,
   FeatureListComponent,
   IntroComponent,
   TestimonialPreviewComponent
@@ -17,6 +18,7 @@ const COMPONENTS = [
   FeatureListComponent,
   TestimonialPreviewComponent,
   TestimonialListComponent,
+  CtaComponent,
 ];
 
 const CONTAINERS = [ManagePageComponent];

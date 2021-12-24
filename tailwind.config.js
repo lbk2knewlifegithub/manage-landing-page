@@ -33,7 +33,6 @@ module.exports = {
       },
       // create custom text colors here
       textColor: {
-        primary: withOpacity("--text-accent"),
         base: withOpacity("--text-base"),
         muted: withOpacity("--text-muted"),
         inverted: withOpacity("--text-inverted"),

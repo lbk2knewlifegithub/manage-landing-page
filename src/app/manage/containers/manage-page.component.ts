@@ -11,7 +11,10 @@ import { Feature, Testimonial } from '../models';
       <!-- end intro -->
 
       <!-- features -->
-      <lbk-feature-list class="block mt-28" [features]="features"></lbk-feature-list>
+      <lbk-feature-list
+        class="block mt-28"
+        [features]="features"
+      ></lbk-feature-list>
       <!-- end features -->
 
       <!-- testimonials -->
@@ -20,16 +23,14 @@ import { Feature, Testimonial } from '../models';
         class="block mt-16"
       ></lbk-testimonial-list>
       <!-- end testimonials -->
+
+      <!-- call to action -->
+      <lbk-cta class="block mt-16"></lbk-cta>
+      <!-- end call to action -->
     </div>
   `,
 })
 export class ManagePageComponent {
   features: Feature[] = fromData.features;
   testimonials: Testimonial[] = fromData.testimonials;
-
-  constructor() {
-    setTimeout(() => {
-      window.scrollTo(0, document.body.scrollHeight);
-    }, 100);
-  }
 }

@@ -20,7 +20,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         <div class="max-w-md flex justify-center flex-col text-center lg:text-left">
           <!-- hero text -->
           <h1
-            class="mt-6 text-3xl font-bold  tracking-wider lg:text-5xl lg:text-left"
+            class="mt-6 text-3xl font-bold  tracking-wide lg:text-5xl lg:text-left"
           >
             Bring everyone together to build better products.
           </h1>

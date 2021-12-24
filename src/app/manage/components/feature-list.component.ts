@@ -4,7 +4,7 @@ import { Feature } from '../models';
 @Component({
   selector: 'lbk-feature-list',
   template: `
-    <div class="lg:flex lg:gap-10 lg:justify-between">
+    <div class="container lg:flex lg:gap-10 lg:justify-between">
       <!-- title -->
       <div class="px-3">
         <h1

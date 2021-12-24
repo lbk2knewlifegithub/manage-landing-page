@@ -17,7 +17,7 @@ import { Testimonial } from '../models';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="">
-      <div class="space-y-10 justify-center aligns-center">
+      <div class="space-y-10">
         <!--  title-->
         <h2 class="text-3xl font-black text-center lg:text-4xl">
           What they've said
@@ -35,7 +35,7 @@ import { Testimonial } from '../models';
             <ng-container *ngFor="let testimonial of testimonials">
               <ng-template carouselSlide>
                 <lbk-testimonial-preview
-                  class="block"
+                  class="block mx-4"
                   [testimonial]="testimonial"
                 ></lbk-testimonial-preview>
               </ng-template>
@@ -43,21 +43,23 @@ import { Testimonial } from '../models';
           </owl-carousel-o>
 
           <!-- dots -->
-          <ul class="flex gap-2 justify-center">
+          <div class="flex gap-2 justify-center">
             <ng-container *ngFor="let testimonial of testimonials; index as i">
-              <li
+              <button
                 (click)="moveTo(i)"
                 [ngClass]="{ 'bg-primary': isActive(i) }"
-                class="duration-700 w-3 h-3 border border-primary rounded-full"
-              ></li>
+                class="duration-700 w-3 h-3 border border-primary rounded-full hover:bg-primary/40"
+              ></button>
             </ng-container>
-          </ul>
+          </div>
           <!-- end dots -->
         </div>
         <!--  end carousel-->
 
         <!--  get started-->
-        <a class="mt-8 btn btn-primary mx-auto" href="#">Get Started</a>
+        <div class="mt-8 grid place-items-center">
+          <a class="btn btn-primary " href="#">Get Started</a>
+        </div>
         <!--  end get started-->
       </div>
     </div>
