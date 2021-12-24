@@ -32,7 +32,7 @@ import { Feature } from '@lbk/manage/models';
         </div>
 
         <!-- description -->
-        <p class="mt-4 text-muted leading-7">{{ feature.description }}</p>
+        <p class="mt-4 text-sm text-muted leading-7 md:text-base">{{ feature.description }}</p>
         <!-- end description -->
       </div>
     </div>

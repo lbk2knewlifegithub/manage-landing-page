@@ -16,52 +16,50 @@ import { Testimonial } from '../models';
   selector: 'lbk-testimonial-list',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="">
-      <div class="">
-        <!--  title-->
-        <h2 data-aos="zoom-in" class="text-3xl font-bold text-center lg:text-4xl">
-          What they've said
-        </h2>
-        <!--  end title-->
+    <div class="flex flex-col items-center">
+      <!--  title-->
+      <h2 class="text-3xl font-bold text-center lg:text-4xl">
+        What they've said
+      </h2>
+      <!--  end title-->
 
-        <!--  carousel-->
-        <div class="space-y-6 container-large lg:mt-12">
-          <owl-carousel-o
-            #owl
-            (translated)="onOwlChange($event)"
-            class="block"
-            [options]="customOptions"
-          >
-            <ng-container *ngFor="let testimonial of testimonials">
-              <ng-template carouselSlide>
-                <lbk-testimonial-preview
-                  class="block mx-4"
-                  [testimonial]="testimonial"
-                ></lbk-testimonial-preview>
-              </ng-template>
-            </ng-container>
-          </owl-carousel-o>
+      <!--  carousel-->
+      <div class="w-full space-y-6 container-large lg:mt-12">
+        <owl-carousel-o
+          #owl
+          (translated)="onOwlChange($event)"
+          class="block"
+          [options]="customOptions"
+        >
+          <ng-container *ngFor="let testimonial of testimonials">
+            <ng-template carouselSlide>
+              <lbk-testimonial-preview
+                class="block mx-4"
+                [testimonial]="testimonial"
+              ></lbk-testimonial-preview>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
 
-          <!-- dots -->
-          <div class="flex gap-2 justify-center md:hidden">
-            <ng-container *ngFor="let testimonial of testimonials; index as i">
-              <button
-                (click)="moveTo(i)"
-                [ngClass]="{ 'bg-primary': isActive(i) }"
-                class="duration-700 w-3 h-3 border border-primary rounded-full hover:bg-primary/40"
-              ></button>
-            </ng-container>
-          </div>
-          <!-- end dots -->
+        <!-- dots -->
+        <div class="flex gap-2 justify-center md:hidden">
+          <ng-container *ngFor="let testimonial of testimonials; index as i">
+            <button
+              (click)="moveTo(i)"
+              [ngClass]="{ 'bg-primary': isActive(i) }"
+              class="duration-700 w-3 h-3 border border-primary rounded-full hover:bg-primary/40"
+            ></button>
+          </ng-container>
         </div>
-        <!--  end carousel-->
-
-        <!--  get started-->
-        <div data-aos="zoom-in" class="mt-8 grid place-items-center lg:mt-14">
-          <a class="btn btn-primary " href="#">Get Started</a>
-        </div>
-        <!--  end get started-->
+        <!-- end dots -->
       </div>
+      <!--  end carousel-->
+
+      <!--  get started-->
+      <div class="mt-8 lg:mt-14">
+        <a class="block btn btn-primary" routerLink="/">Get Started</a>
+      </div>
+      <!--  end get started-->
     </div>
   `,
 })

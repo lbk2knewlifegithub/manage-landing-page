@@ -31,7 +31,7 @@ import { debounceTime, fromEvent } from 'rxjs';
       <div
         @zoomInOnEnter
         @zoomOutLeftOnLeave
-        class="container mt-32 pointer-events-auto max-w-md"
+        class="container mt-32 pointer-events-auto max-w-md mx-auto"
       >
         <!--    links-->
         <ul

@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
 
 @Component({
   selector: 'lbk-root',
@@ -27,7 +26,5 @@ import * as AOS from 'aos';
   `,
 })
 export class AppComponent implements OnInit {
-  ngOnInit(): void {
-    AOS.init({ duration: 700 });
-  }
+  ngOnInit(): void {}
 }

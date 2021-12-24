@@ -4,7 +4,7 @@ import { Feature } from '../models';
 @Component({
   selector: 'lbk-feature-list',
   template: `
-    <lbk-pattern-middle></lbk-pattern-middle>
+    <!-- <lbk-pattern-middle></lbk-pattern-middle> -->
 
     <div
       class="relative container grid gap-10 lg:grid-cols-2 lg:gap-20 overflow-hidden"
@@ -28,7 +28,6 @@ import { Feature } from '../models';
       <ul class="space-y-10">
         <ng-container *ngFor="let feature of features; index as i">
           <lbk-feature-preview
-            data-aos="zoom-in-right"
             class="block"
             [index]="i"
             [feature]="feature"

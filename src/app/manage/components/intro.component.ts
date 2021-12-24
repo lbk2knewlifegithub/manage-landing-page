@@ -5,12 +5,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="relative container">
-
       <div
         class="grid place-content-center place-items-center gap-8 lg:grid-cols-2 lg:place-items-start"
       >
         <!-- pattern -->
-        <div data-aos="slide-left" class="max-w-xl lg:order-last">
+        <div class="max-w-xl lg:order-last">
           <img
             src="/assets/images/illustration-intro.svg"
             alt="Illustration Intro"
@@ -19,7 +18,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         <!-- end pattern -->
 
         <div
-          data-aos="slide-right"
           class="max-w-lg grid place-content-center gap-10 text-center lg:text-left lg:place-items-start lg:mt-10 lg:gap-20"
         >
           <div>
@@ -38,7 +36,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           </div>
 
           <!--    get started-->
-          <div data-aos="zoom-in-right" data-aos-delay="600">
+          <div>
             <a class="btn btn-primary" routerLink="/">Get started</a>
           </div>
           <!--    end get started-->
