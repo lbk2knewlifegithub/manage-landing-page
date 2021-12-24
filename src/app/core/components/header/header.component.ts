@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {
-  fadeInDownOnEnterAnimation, slideInDownOnEnterAnimation
+  fadeInDownOnEnterAnimation,
+  slideInDownOnEnterAnimation
 } from 'angular-animations';
 
 @Component({
@@ -35,7 +36,7 @@ import {
     </header>
 
     <!-- modal links -->
-    <!-- <lbk-modal-links [(open)]="openModal"></lbk-modal-links> -->
+    <lbk-modal-links [(open)]="openModal"></lbk-modal-links>
     <!-- end modal links -->
   `,
   animations: [

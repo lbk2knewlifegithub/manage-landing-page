@@ -8,10 +8,9 @@ import { Feature } from '@lbk/manage/models';
     <div class="lg:flex lg:gap-6">
       <!--  order desktop-->
       <div>
-        <span
-          class="badge-primary hidden lg:block"
-          >{{ index | number: '2.0-0' }}</span
-        >
+        <span class="badge-primary hidden lg:block">{{
+          index | number: '2.0-0'
+        }}</span>
       </div>
       <!--  end order desktop-->
 
@@ -20,19 +19,24 @@ import { Feature } from '@lbk/manage/models';
           class="flex justify-start items-center bg-primary-300 h-10 rounded-full lg:text-lg lg:bg-transparent"
         >
           <!--  order-->
-          <span
-            class="badge-primary h-full lg:hidden"
-            >{{ index | number: '2.0-0' }}</span
-          >
+          <span class="badge-primary h-full lg:hidden">{{
+            index | number: '2.0-0'
+          }}</span>
           <!--  end order-->
 
           <!-- name -->
-          <strong class="ml-3 text-sm lg:ml-0 lg:text-lg">{{ feature.name }}</strong>
+          <strong class="ml-3 text-sm lg:ml-0 lg:text-lg">{{
+            feature.name
+          }}</strong>
           <!-- end name -->
         </div>
 
         <!-- description -->
-        <p class="mt-4 text-sm text-muted leading-7 indent-4 lg:indent-0 md:text-base">{{ feature.description }}</p>
+        <p
+          class="mt-4 text-sm text-muted leading-7 indent-4 md:text-base lg:indent-0 lg:mt-0"
+        >
+          {{ feature.description }}
+        </p>
         <!-- end description -->
       </div>
     </div>

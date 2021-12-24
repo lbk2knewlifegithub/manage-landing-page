@@ -16,7 +16,7 @@ import { Testimonial } from '../models';
   selector: 'lbk-testimonial-list',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="flex flex-col items-center">
+    <div class="flex flex-col items-center py-2">
       <!--  title-->
       <h2 class="text-3xl font-bold text-center lg:text-4xl">
         What they've said
@@ -57,7 +57,9 @@ import { Testimonial } from '../models';
 
       <!--  get started-->
       <div class="mt-8 lg:mt-14">
-        <a class="block btn btn-primary" routerLink="/">Get Started</a>
+        <a  class="block btn btn-primary" routerLink="/"
+          >Get Started</a
+        >
       </div>
       <!--  end get started-->
     </div>
