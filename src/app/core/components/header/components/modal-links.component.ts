@@ -1,8 +1,10 @@
 import {
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   EventEmitter,
   Input,
+  OnInit,
   Output
 } from '@angular/core';
 import { listAnimation } from '@lbk/shared/animations';
@@ -12,6 +14,7 @@ import {
   zoomInOnEnterAnimation,
   zoomOutLeftOnLeaveAnimation
 } from 'angular-animations';
+import { debounceTime, fromEvent } from 'rxjs';
 
 @Component({
   selector: 'lbk-modal-links',
@@ -21,9 +24,8 @@ import {
     <div
       @fadeInOnEnter
       @fadeOutOnLeave
-      (@fadeOutOnLeave.done)="animationDone()"
       *ngIf="open"
-      class="fixed top-0 left-0 w-full h-full bg-black/10 z-40"
+      class="modal-links fixed top-0 left-0 w-full h-full bg-black/10 pointer-events-none z-40"
     >
       <div
         @zoomInOnEnter
@@ -74,20 +76,37 @@ import {
     listAnimation({ delayEnter: 600 }),
   ],
 })
-export class ModalLinksComponent {
+export class ModalLinksComponent implements OnInit {
   @Input() open!: boolean;
   @Output() openChange = new EventEmitter<boolean>();
 
-  linkSelected = false;
+  constructor(private readonly _cd: ChangeDetectorRef) {}
 
-  animationDone() {
-    if (this.linkSelected) this.openChange.emit(false);
+  ngOnInit(): void {
+    fromEvent(window, 'scroll')
+      .pipe(debounceTime(200))
+      .subscribe(() => {
+        if (this.open) this.close();
+      });
 
-    this.linkSelected = false;
+    fromEvent(window, 'click').subscribe((event: Event) => {
+      const target = event.target as HTMLElement;
+      const matched = target.matches('#menu');
+      if (matched) return;
+
+      const closest = target.closest('.modal-links');
+      if (!closest && this.open) this.close();
+    });
   }
 
-  onLink() {
-    this.linkSelected = true;
+  onLink() {}
+
+  close() {
     this.open = false;
+    this._cd.markForCheck();
+
+    setTimeout(() => {
+      this.openChange.emit(false);
+    }, 1990);
   }
 }

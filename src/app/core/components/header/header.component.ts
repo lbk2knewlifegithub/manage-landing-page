@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'lbk-header',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <header class="container mt-10">
+    <header data-aos="slide-down" class="container mt-10">
       <nav class="flex items-center justify-between">
         <!--  logo-->
         <a class="z-50" routerLink="/">
@@ -17,11 +17,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         <!-- end links -->
 
         <div class="hidden lg:block">
-          <a class="text-base btn btn-primary" href="#">Get Started</a>
+          <a class="text-base btn btn-primary" routerLink="/">Get Started</a>
         </div>
 
         <!--  hamburger menu-->
-        <lbk-menu class="z-50 lg:hidden" [(open)]="openModal"></lbk-menu>
+        <lbk-menu class="z-50 block lg:hidden" [(open)]="openModal"></lbk-menu>
         <!--  end hamburger menu-->
       </nav>
     </header>

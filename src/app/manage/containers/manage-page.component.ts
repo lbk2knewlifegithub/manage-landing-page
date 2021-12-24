@@ -12,7 +12,7 @@ import { Feature, Testimonial } from '../models';
 
       <!-- features -->
       <lbk-feature-list
-        class="block mt-28"
+        class="block mt-28 md:mt-32"
         [features]="features"
       ></lbk-feature-list>
       <!-- end features -->

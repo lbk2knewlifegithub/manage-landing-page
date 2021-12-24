@@ -11,7 +11,7 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <button (click)="onMenu()">
-      <img [src]="icon" [alt]="name" />
+      <img id="menu" [src]="icon" [alt]="name" />
     </button>
   `,
 })

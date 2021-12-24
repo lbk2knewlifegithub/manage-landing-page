@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'lbk-cta',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="relative text-white bg-primary py-32 ">
+    <div class="relative text-white bg-primary py-32 lg:py-20">
       <!--    Background mobile-->
       <img
         class="absolute top-0 left-0 h-full lg:hidden"
@@ -21,18 +21,23 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       />
       <!--    end [ sBackground desktop-->
 
-      <div class="relative container grid gap-8 place-items-center">
+      <div
+        class="relative container grid gap-8 place-items-center lg:grid-cols-2"
+      >
         <h2
+          data-aos="slide-left"
           class="text-inverted font-bold text-4xl text-center lg:text-4xl lg:text-left"
         >
-          Simplify how <br />
-          your team works todays.
+          Simplify how your team <br class="hidden lg:inline" />
+          works todays.
         </h2>
 
         <!-- get started button -->
-        <a class="btn btn-primary-inverted !text-primary" href="#"
-          >Get started</a
-        >
+        <div data-aos="slide-right" class="lg:justify-self-end">
+          <a class="btn btn-primary-inverted text-primary" href="#"
+            >Get started</a
+          >
+        </div>
         <!-- end get started button -->
       </div>
     </div>

@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'lbk-inbox',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <form class="container ">
+    <form>
       <!-- email form -->
       <div class="flex gap-4 justify-between items-center">
         <input
@@ -18,10 +18,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         <!-- end submit button -->
       </div>
       <!-- end email form -->
-
-      <p class="hidden mt-10 text-sm text-center text-skin-muted">
-        Copyright 2020. All Rights Reserved
-      </p>
     </form>
   `,
 })

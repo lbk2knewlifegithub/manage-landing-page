@@ -19,7 +19,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styles: [
     `
       :host {
-        @apply flex px-10 justify-between;
+        @apply flex px-10 justify-between lg:px-0;
 
         ul {
           @apply space-y-3;

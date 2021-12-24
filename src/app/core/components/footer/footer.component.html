@@ -1,22 +1,29 @@
-<footer class='pt-16 pb-6 bg-footer text-inverted '>
-  <div class='container flex flex-col max-w-3xl gap-10 md:gap-16'>
+<footer class='pt-16 pb-6 bg-footer text-inverted lg:py-20'>
+  <div
+    class='container flex flex-col max-w-3xl gap-10 md:gap-16 lg:max-w-[1280px] lg:flex-row lg:justify-between lg:gap-28 xl:gap-40'>
 
-    <!-- inbox -->
-    <lbk-inbox class="block w-full"></lbk-inbox>
-    <!-- end inbox -->
+    <div class="flex flex-col justify-between lg:order-last">
+      <!-- inbox -->
+      <lbk-inbox class="block w-full"></lbk-inbox>
+      <!-- end inbox -->
+
+      <!--  copyright-->
+      <lbk-copyright class="hidden lg:block"></lbk-copyright>
+      <!--  end copyright-->
+    </div>
 
     <!--  links-->
-    <lbk-footer-links class=""></lbk-footer-links>
+    <lbk-footer-links class="block lg:grow"></lbk-footer-links>
     <!--  end links-->
 
-    <div class='flex flex-col items-center'>
+    <div class='flex flex-col items-center gap-16 gap-0: lg:order-first lg:justify-between lg:items-start'>
       <!-- social -->
       <lbk-social class="w-full max-w-md"></lbk-social>
       <!-- end social -->
 
 
       <!--  logo-->
-      <div class='flex justify-center mt-16'>
+      <div class='lg:order-first'>
         <img src='/assets/images/logo-light.svg' alt='Logo'>
       </div>
       <!--  end logo-->
@@ -25,6 +32,6 @@
   </div>
 
   <!--  copyright-->
-  <lbk-copyright class="block mt-20"></lbk-copyright>
+  <lbk-copyright class="block mt-20 lg:hidden"></lbk-copyright>
   <!--  end copyright-->
 </footer>

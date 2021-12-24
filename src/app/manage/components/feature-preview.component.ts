@@ -5,20 +5,36 @@ import { Feature } from '@lbk/manage/models';
   selector: 'lbk-feature-preview',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div>
-      <!-- top -->
-      <div class="flex justify-start items-center bg-primary-300 h-10 rounded-full lg:text-lg" >
-        <!--  numbers-->
+    <div class="flex gap-6">
+      <!--  order desktop-->
+      <div>
         <span
-          class="px-5 leading-10 bg-primary rounded-full text-white font-bold h-full"
+          class="badge-primary hidden lg:block"
           >{{ index | number: '2.0-0' }}</span
         >
-        <!--  end numbers-->
-        <strong class="ml-3 text-sm">{{ feature.name }}</strong>
       </div>
-      <!-- end top -->
+      <!--  end order desktop-->
 
-      <p class="mt-4 text-muted leading-7">{{ feature.description }}</p>
+      <div>
+        <div
+          class="flex justify-start items-center bg-primary-300 h-10 rounded-full lg:text-lg lg:bg-transparent"
+        >
+          <!--  order-->
+          <span
+            class="badge-primary h-full lg:hidden"
+            >{{ index | number: '2.0-0' }}</span
+          >
+          <!--  end order-->
+
+          <!-- name -->
+          <strong class="ml-3 text-sm lg:ml-0 lg:text-lg">{{ feature.name }}</strong>
+          <!-- end name -->
+        </div>
+
+        <!-- description -->
+        <p class="mt-4 text-muted leading-7">{{ feature.description }}</p>
+        <!-- end description -->
+      </div>
     </div>
   `,
 })

@@ -4,19 +4,17 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'lbk-copyright',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div>
-      <p class="text-sm text-center text-muted">
-        Copyright 2020. All Rights Reserved
-      </p>
+    <div class="text-sm text-muted text-center lg:text-right">
+      <p>Copyright 2020. All Rights Reserved</p>
 
       <!-- front end mentor -->
-      <p class="text-xs text-center text-muted">
+      <p class="text-xs">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by
         <a
-          class="text-sky-600 decoration-wavy"
+          class="text-sky-600 decoration-red-900 decoration-wavy"
           href="https://github.com/lbk2knewlifegithub"
           >lbk2k</a
         >.

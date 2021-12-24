@@ -15,6 +15,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styles: [
     `
       ul {
+        @apply flex gap-8 font-medium text-muted;
         li {
           a {
             @apply hover:tracking-normal hover:text-fill;

@@ -9,7 +9,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         class="grid place-content-center place-items-center gap-8 lg:grid-cols-2 lg:place-items-start"
       >
         <!-- pattern -->
-        <div class="max-w-xl lg:order-last">
+        <div data-aos="slide-left" class="max-w-xl lg:order-last">
           <img
             src="/assets/images/illustration-intro.svg"
             alt="Illustration Intro"
@@ -18,6 +18,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         <!-- end pattern -->
 
         <div
+        data-aos="slide-right"
           class="max-w-lg grid place-content-center gap-10 text-center lg:text-left lg:place-items-start lg:mt-10 lg:gap-20"
         >
           <div>

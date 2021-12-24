@@ -17,15 +17,15 @@ import { Testimonial } from '../models';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="">
-      <div class="space-y-10">
+      <div class="">
         <!--  title-->
-        <h2 class="text-3xl font-black text-center lg:text-4xl">
+        <h2 class="text-3xl font-bold text-center lg:text-4xl">
           What they've said
         </h2>
         <!--  end title-->
 
         <!--  carousel-->
-        <div class="space-y-6">
+        <div class="space-y-6 container-large lg:mt-12">
           <owl-carousel-o
             #owl
             (translated)="onOwlChange($event)"
@@ -57,7 +57,7 @@ import { Testimonial } from '../models';
         <!--  end carousel-->
 
         <!--  get started-->
-        <div class="mt-8 grid place-items-center">
+        <div class="mt-8 grid place-items-center lg:mt-14">
           <a class="btn btn-primary " href="#">Get Started</a>
         </div>
         <!--  end get started-->
@@ -86,6 +86,9 @@ export class TestimonialListComponent implements OnInit {
       768: {
         items: 2,
       },
+      1280: {
+        items: 3,
+      },
     },
   };
 
@@ -94,7 +97,7 @@ export class TestimonialListComponent implements OnInit {
   }
 
   moveTo(index: number) {
-    // this.owl.to(`owl-slide-${index}`);
+    this.owl.to(`owl-slide-${index}`);
   }
 
   isActive(index: number) {
