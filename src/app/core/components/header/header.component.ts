@@ -41,7 +41,7 @@ import {
   `,
   animations: [
     slideInDownOnEnterAnimation({ delay: 200 }),
-    fadeInDownOnEnterAnimation(),
+    fadeInDownOnEnterAnimation({ delay: 500 }),
   ],
 })
 export class HeaderComponent {

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import * as fromData from '@lbk/manage/data';
-import { slideInUpOnEnterAnimation } from 'angular-animations';
+import { fadeInOnEnterAnimation } from 'angular-animations';
 import { Feature, Testimonial } from '../models';
 
 @Component({
@@ -12,7 +12,9 @@ import { Feature, Testimonial } from '../models';
         <lbk-intro class="block mt-14 xl:mt-20"></lbk-intro>
         <!-- end intro -->
 
+        <!-- pattern middle desktop -->
         <div
+          @pattern
           class="absolute right-0 translate-x-1/2 -translate-y-1/2 lg:hidden z-[-1]"
         >
           <img
@@ -21,10 +23,11 @@ import { Feature, Testimonial } from '../models';
             alt="Illustration"
           />
         </div>
+        <!-- end pattern middle desktop -->
 
         <!-- features -->
         <lbk-feature-list
-          @slideInUpOnEnter
+          @features
           class="block mt-28 md:mt-32"
           [features]="features"
         ></lbk-feature-list>
@@ -43,7 +46,10 @@ import { Feature, Testimonial } from '../models';
       <!-- end call to action -->
     </main>
   `,
-  animations: [slideInUpOnEnterAnimation()],
+  animations: [
+    fadeInOnEnterAnimation({ anchor: 'features' }),
+    fadeInOnEnterAnimation({ anchor: 'pattern', delay: 300 }),
+  ],
 })
 export class ManagePageComponent {
   features: Feature[] = fromData.features;
