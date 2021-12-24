@@ -1,4 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  slideInLeftAnimation,
+  slideInLeftOnEnterAnimation,
+  slideInRightAnimation,
+  slideInRightOnEnterAnimation
+} from 'angular-animations';
 
 @Component({
   selector: 'lbk-intro',
@@ -9,7 +15,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         class="grid place-content-center place-items-center gap-8 lg:grid-cols-2 lg:place-items-start"
       >
         <!-- pattern -->
-        <div class="max-w-xl lg:order-last">
+        <div @slideInRightOnEnter class="max-w-xl lg:order-last">
           <img
             src="/assets/images/illustration-intro.svg"
             alt="Illustration Intro"
@@ -18,6 +24,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         <!-- end pattern -->
 
         <div
+          @slideInLeftOnEnter
           class="max-w-lg grid place-content-center gap-10 text-center lg:text-left lg:place-items-start lg:mt-10 lg:gap-20"
         >
           <div>
@@ -44,5 +51,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       </div>
     </div>
   `,
+  animations: [
+    slideInLeftOnEnterAnimation(),
+    slideInRightOnEnterAnimation(),
+  ],
 })
 export class IntroComponent {}

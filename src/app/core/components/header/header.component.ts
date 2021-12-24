@@ -1,12 +1,18 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  fadeInDownOnEnterAnimation, slideInDownOnEnterAnimation
+} from 'angular-animations';
 
 @Component({
   selector: 'lbk-header',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <lbk-pattern-top class="block absolute"></lbk-pattern-top>
+    <lbk-pattern-top
+      @fadeInDownOnEnter
+      class="block absolute"
+    ></lbk-pattern-top>
 
-    <header class="container pt-10">
+    <header @slideInDownOnEnter class="container pt-10">
       <nav class="flex items-center justify-between">
         <!--  logo-->
         <a class="z-50" routerLink="/">
@@ -32,6 +38,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     <lbk-modal-links [(open)]="openModal"></lbk-modal-links>
     <!-- end modal links -->
   `,
+  animations: [
+    slideInDownOnEnterAnimation({ delay: 200 }),
+    fadeInDownOnEnterAnimation(),
+  ],
 })
 export class HeaderComponent {
   openModal = false;
