@@ -6,9 +6,7 @@ import { Feature } from '../models';
   template: `
     <lbk-pattern-middle></lbk-pattern-middle>
 
-    <div
-      class="container grid gap-10 lg:grid-cols-2 lg:gap-20"
-    >
+    <div class="container grid gap-10 lg:grid-cols-2 lg:gap-20">
       <!-- title -->
       <div class="px-6 space-y-4 text-center md:px-0 lg:text-left">
         <h1 class="font-bold text-3xl lg:text-4xl">
@@ -25,9 +23,10 @@ import { Feature } from '../models';
       </div>
       <!-- end title -->
 
-      <ul class="space-y-10">
+      <ul class="space-y-8">
         <ng-container *ngFor="let feature of features; index as i">
           <lbk-feature-preview
+            class="block"
             [index]="i"
             [feature]="feature"
           ></lbk-feature-preview>
