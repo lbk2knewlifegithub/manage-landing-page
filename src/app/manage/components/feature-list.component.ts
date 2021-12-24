@@ -4,19 +4,15 @@ import { Feature } from '../models';
 @Component({
   selector: 'lbk-feature-list',
   template: `
-    <div class="container lg:flex lg:gap-10 lg:justify-between">
+    <div class="container grid gap-10 lg:grid-cols-2">
       <!-- title -->
-      <div class="px-3">
-        <h1
-          class="text-center font-bold text-3xl text-skin-base lg:text-left lg:text-4xl"
-        >
+      <div class="-px-3 space-y-5 text-center lg:text-left">
+        <h1 class="font-bold text-3xl">
           What's different about <br class="hidden lg:inline" />
           Manager?
         </h1>
 
-        <p
-          class="text-muted mt-5 text-center leading-7  lg:text-left lg:text-xl"
-        >
+        <p class="text-muted leading-7">
           Manager provides all the functionally your team need, without the
           complexity. Our software is tailor-made for modern digital products
           teams.
@@ -24,9 +20,10 @@ import { Feature } from '../models';
       </div>
       <!-- end title -->
 
-      <ul class="mt-14 space-y-10 lg:mt-0">
+      <ul class="space-y-10">
         <ng-container *ngFor="let feature of features; index as i">
           <lbk-feature-preview
+            data-aos="slide-left"
             class="block"
             [index]="i"
             [feature]="feature"
@@ -35,6 +32,7 @@ import { Feature } from '../models';
       </ul>
     </div>
   `,
+  animations: [],
 })
 export class FeatureListComponent {
   @Input() features!: Feature[];

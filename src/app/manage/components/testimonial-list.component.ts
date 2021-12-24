@@ -43,7 +43,7 @@ import { Testimonial } from '../models';
           </owl-carousel-o>
 
           <!-- dots -->
-          <div class="flex gap-2 justify-center">
+          <div class="flex gap-2 justify-center md:hidden">
             <ng-container *ngFor="let testimonial of testimonials; index as i">
               <button
                 (click)="moveTo(i)"
@@ -83,14 +83,8 @@ export class TestimonialListComponent implements OnInit {
       0: {
         items: 1,
       },
-      400: {
+      768: {
         items: 2,
-      },
-      740: {
-        items: 3,
-      },
-      940: {
-        items: 4,
       },
     },
   };

@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <div class="container">
       <div
-        class="flex flex-col justify-center items-center lg:flex-row lg:justify-between"
+        class="grid place-content-center place-items-center gap-8 lg:grid-cols-2 lg:place-items-start"
       >
         <!-- pattern -->
         <div class="max-w-xl lg:order-last">
@@ -17,23 +17,27 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         </div>
         <!-- end pattern -->
 
-        <div class="max-w-md flex justify-center flex-col text-center lg:text-left">
-          <!-- hero text -->
-          <h1
-            class="mt-6 text-3xl font-bold  tracking-wide lg:text-5xl lg:text-left"
-          >
-            Bring everyone together to build better products.
-          </h1>
-          <!-- end hero text -->
+        <div
+          class="max-w-lg grid place-content-center gap-10 text-center lg:text-left lg:place-items-start lg:mt-10 lg:gap-20"
+        >
+          <div>
+            <!-- hero text -->
+            <h1
+              class="text-3xl font-bold tracking-wide lg:text-left sm:text-4xl xl:text-5xl"
+            >
+              Bring everyone together to build better products.
+            </h1>
+            <!-- end hero text -->
 
-          <p class="text-muted mt-2 lg:text-lg lg:text-left">
-            Manager makes it simple for software teams to plan day-to-day tasks
-            while keeping the larger team goals in view.
-          </p>
+            <p class="text-muted mt-2  lg:max-w-sm lg:mt-4">
+              Manager makes it simple for software teams to plan day-to-day
+              tasks while keeping the larger team goals in view.
+            </p>
+          </div>
 
           <!--    get started-->
-          <div class="mt-10 mx-auto lg:ml-0">
-            <a class="btn btn-primary" href="#">Get started</a>
+          <div class="">
+            <a class="btn btn-primary" routerLink="/">Get started</a>
           </div>
           <!--    end get started-->
         </div>

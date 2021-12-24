@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'lbk-social',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <ul class="text-4xl flex justify-around">
+    <ul class="text-4xl flex justify-around items-center">
       <li>
         <a routerLink="/"><span class="fab fa-facebook-square"></span></a>
       </li>
@@ -22,5 +22,16 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       </li>
     </ul>
   `,
+  styles: [
+    `
+      ul {
+        li {
+          a {
+            @apply duration-500 hover:text-primary;
+          }
+        }
+      }
+    `,
+  ],
 })
 export class SocialComponent {}

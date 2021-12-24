@@ -5,15 +5,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Pricing</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">About Us</a></li>
+      <li><a class="animated-link " routerLink="/">Home</a></li>
+      <li><a class="animated-link " routerLink="/">Pricing</a></li>
+      <li><a class="animated-link " routerLink="/">Products</a></li>
+      <li><a class="animated-link " routerLink="/">About Us</a></li>
     </ul>
     <ul>
-      <li><a href="#">Careers</a></li>
-      <li><a href="#">Community</a></li>
-      <li><a href="#">Privacy Policy</a></li>
+      <li><a class="animated-link " routerLink="/">Careers</a></li>
+      <li><a class="animated-link " routerLink="/">Community</a></li>
+      <li><a class="animated-link " routerLink="/">Privacy Policy</a></li>
     </ul>
   `,
   styles: [
@@ -26,6 +26,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
           li {
             a {
+              @apply text-muted font-semibold hover:text-white hover:tracking-normal;
             }
           }
         }

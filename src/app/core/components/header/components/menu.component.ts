@@ -10,7 +10,7 @@ import {
   selector: 'lbk-menu',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <button class="lg:hidden" (click)="onMenu()">
+    <button (click)="onMenu()">
       <img [src]="icon" [alt]="name" />
     </button>
   `,

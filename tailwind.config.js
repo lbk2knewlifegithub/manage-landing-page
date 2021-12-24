@@ -20,7 +20,9 @@ module.exports = {
       center: true,
       padding: {
         DEFAULT: "1rem",
-        xl: "0rem",
+        md: "2rem",
+        'xl': "4rem",
+        '2xl': "0rem",
       },
     },
     extend: {
@@ -33,7 +35,7 @@ module.exports = {
       },
       // create custom text colors here
       textColor: {
-        base: withOpacity("--text-base"),
+        fill: withOpacity("--text-fill"),
         muted: withOpacity("--text-muted"),
         inverted: withOpacity("--text-inverted"),
       },
@@ -57,10 +59,7 @@ module.exports = {
     plugin(function ({ addComponents }) {
       addComponents({
         ".container": {
-          maxWidth: "100%",
-          "@screen 2xl": {
-            maxWidth: "1440px",
-          },
+          maxWidth: "1280px",
         },
       });
     }),

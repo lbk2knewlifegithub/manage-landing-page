@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'lbk-root',
@@ -21,8 +22,16 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     <router-outlet></router-outlet>
 
     <!--footer-->
-    <lbk-footer></lbk-footer>
+    <lbk-footer ></lbk-footer>
     <!--end footer-->
   `,
 })
-export class AppComponent {}
+export class AppComponent implements OnInit {
+  ngOnInit(): void {
+    AOS.init({
+      offset: 100,
+      duration: 500,
+      once: true
+    });
+  }
+}

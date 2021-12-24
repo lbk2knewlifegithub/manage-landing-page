@@ -27,12 +27,16 @@
     --primary: 12, 88%, 59%;
     --primary-300: 13, 100%, 96%;
   }
+
+  input[type="email"] {
+    @apply text-fill border-2 border-transparent focus:border-primary focus:ring-2 focus:ring-primary;
+  }
 }
 
 @layer components {
   //CUSTOM APPLY HERE
   .btn {
-    @apply inline-block rounded-full px-10 py-4 text-sm font-black tracking-wide lg:text-base shadow-lg;
+    @apply inline-block rounded-full px-10 py-4 text-sm font-black tracking-wide lg:text-base shadow-lg hover:opacity-70;
   }
 
   .btn-primary {

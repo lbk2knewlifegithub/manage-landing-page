@@ -23,12 +23,12 @@ import {
       @fadeOutOnLeave
       (@fadeOutOnLeave.done)="animationDone()"
       *ngIf="open"
-      class="fixed top-0 left-0 w-full h-full pointer-events-none bg-black/10"
+      class="fixed top-0 left-0 w-full h-full bg-black/10 z-40"
     >
       <div
         @zoomInOnEnter
         @zoomOutLeftOnLeave
-        class="container mt-32 pointer-events-auto"
+        class="container mt-32 pointer-events-auto max-w-md"
       >
         <!--    links-->
         <ul

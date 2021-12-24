@@ -7,7 +7,7 @@ import { Feature, Testimonial } from '../models';
   template: `
     <div class="">
       <!-- intro -->
-      <lbk-intro class="block mt-14"></lbk-intro>
+      <lbk-intro class="block mt-14 xl:mt-20"></lbk-intro>
       <!-- end intro -->
 
       <!-- features -->
@@ -20,12 +20,12 @@ import { Feature, Testimonial } from '../models';
       <!-- testimonials -->
       <lbk-testimonial-list
         [testimonials]="testimonials"
-        class="block mt-16"
+        class="block mt-16 sm:mt-32"
       ></lbk-testimonial-list>
       <!-- end testimonials -->
 
       <!-- call to action -->
-      <lbk-cta class="block mt-16"></lbk-cta>
+      <lbk-cta data-aos="fade-in" data-aos="" class="block mt-16"></lbk-cta>
       <!-- end call to action -->
     </div>
   `,

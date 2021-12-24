@@ -9,7 +9,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <div class="flex gap-4 justify-between items-center">
         <input
           class="w-full py-3 pl-6 text-sm rounded-full placeholder:text-gray-400"
-          type="text"
+          type="email"
           placeholder="Updates in your inbox..."
         />
 
@@ -19,7 +19,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       </div>
       <!-- end email form -->
 
-      <p class="hidden mt-10 text-sm text-center text-skin-muted md:block">
+      <p class="hidden mt-10 text-sm text-center text-skin-muted">
         Copyright 2020. All Rights Reserved
       </p>
     </form>

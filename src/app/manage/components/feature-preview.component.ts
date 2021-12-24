@@ -5,7 +5,7 @@ import { Feature } from '@lbk/manage/models';
   selector: 'lbk-feature-preview',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="mt-10">
+    <div>
       <!-- top -->
       <div class="flex justify-start items-center bg-primary-300 h-10 rounded-full lg:text-lg" >
         <!--  numbers-->

@@ -7,13 +7,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     <header class="container mt-10">
       <nav class="flex items-center justify-between">
         <!--  logo-->
-        <a routerLink="/">
+        <a class="z-50" routerLink="/">
           <img src="/assets/images/logo.svg" alt="Logo" />
         </a>
         <!--  end logo-->
 
         <!-- links -->
-        <lbk-links-header class="block lg:hidden"></lbk-links-header>
+        <lbk-links-header class="hidden lg:block"></lbk-links-header>
         <!-- end links -->
 
         <div class="hidden lg:block">
@@ -21,7 +21,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         </div>
 
         <!--  hamburger menu-->
-        <lbk-menu [(open)]="openModal"></lbk-menu>
+        <lbk-menu class="z-50 lg:hidden" [(open)]="openModal"></lbk-menu>
         <!--  end hamburger menu-->
       </nav>
     </header>
@@ -32,5 +32,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   `,
 })
 export class HeaderComponent {
-  openModal = true;
+  openModal = false;
 }

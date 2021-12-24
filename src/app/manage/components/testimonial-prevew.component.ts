@@ -6,7 +6,7 @@ import { Testimonial } from '../models';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <!--  content-->
-    <div class="relative mt-20 bg-muted rounded-sm px-5 pb-10 flow-root">
+    <div class="relative mt-20 bg-muted rounded-sm px-5 pb-10 sm:px-8 flow-root h-full">
       <!-- avatar -->
       <div
         class="w-20 h-20 absolute top-0 left-1/2 -translate-y-1/2 -translate-x-1/2 duration-500 hover:scale-110"
@@ -22,7 +22,7 @@ import { Testimonial } from '../models';
       <!-- end name -->
 
       <!-- comment -->
-      <p class="mt-5 text-muted text-center">"{{ testimonial.comment }}"</p>
+      <p class="mt-5 text-muted text-center sm:mt-6">"{{ testimonial.comment }}"</p>
       <!-- end comment -->
     </div>
     <!--  content-->
