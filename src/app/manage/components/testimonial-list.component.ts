@@ -28,7 +28,7 @@ import { Testimonial } from '../models';
         <owl-carousel-o
           #owl
           (translated)="onOwlChange($event)"
-          class="block"
+          class="block w-full"
           [options]="customOptions"
         >
           <ng-container *ngFor="let testimonial of testimonials">

@@ -35,7 +35,7 @@ import {
     </header>
 
     <!-- modal links -->
-    <lbk-modal-links [(open)]="openModal"></lbk-modal-links>
+    <!-- <lbk-modal-links [(open)]="openModal"></lbk-modal-links> -->
     <!-- end modal links -->
   `,
   animations: [
