@@ -4,13 +4,13 @@ import { Feature } from '../models';
 @Component({
   selector: 'lbk-feature-list',
   template: `
-    <!-- <lbk-pattern-middle></lbk-pattern-middle> -->
+    <lbk-pattern-middle></lbk-pattern-middle>
 
     <div
-      class="relative container grid gap-10 lg:grid-cols-2 lg:gap-20 overflow-hidden"
+      class="container grid gap-10 lg:grid-cols-2 lg:gap-20"
     >
       <!-- title -->
-      <div class="-px-3 space-y-4 text-center lg:text-left">
+      <div class="px-6 space-y-4 text-center md:px-0 lg:text-left">
         <h1 class="font-bold text-3xl lg:text-4xl">
           What's different about Manager?
         </h1>
@@ -28,7 +28,6 @@ import { Feature } from '../models';
       <ul class="space-y-10">
         <ng-container *ngFor="let feature of features; index as i">
           <lbk-feature-preview
-            class="block"
             [index]="i"
             [feature]="feature"
           ></lbk-feature-preview>

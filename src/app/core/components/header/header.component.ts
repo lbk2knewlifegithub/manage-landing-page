@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <lbk-pattern-top class="block absolute"></lbk-pattern-top>
 
-    <header class="container pt-10 overflow-hidden">
+    <header class="container pt-10">
       <nav class="flex items-center justify-between">
         <!--  logo-->
         <a class="z-50" routerLink="/">

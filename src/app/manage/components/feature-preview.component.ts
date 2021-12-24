@@ -5,7 +5,7 @@ import { Feature } from '@lbk/manage/models';
   selector: 'lbk-feature-preview',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="flex gap-6">
+    <div class="lg:flex lg:gap-6">
       <!--  order desktop-->
       <div>
         <span
