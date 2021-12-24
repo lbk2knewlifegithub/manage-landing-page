@@ -5,17 +5,20 @@ import { Feature, Testimonial } from '../models';
 @Component({
   selector: 'lbk-manage-page',
   template: `
-    <div class="space-y-20 lg:space-y-40">
+    <div class="">
       <!-- intro -->
-      <lbk-intro class="block"></lbk-intro>
+      <lbk-intro class="block mt-14"></lbk-intro>
       <!-- end intro -->
 
       <!-- features -->
-      <!-- <lbk-feature-list class="block" [features]="features"></lbk-feature-list> -->
+      <lbk-feature-list class="block mt-28" [features]="features"></lbk-feature-list>
       <!-- end features -->
 
       <!-- testimonials -->
-      <!-- <lbk-testimonial-list class="block"></lbk-testimonial-list> -->
+      <lbk-testimonial-list
+        [testimonials]="testimonials"
+        class="block mt-16"
+      ></lbk-testimonial-list>
       <!-- end testimonials -->
     </div>
   `,
@@ -23,4 +26,10 @@ import { Feature, Testimonial } from '../models';
 export class ManagePageComponent {
   features: Feature[] = fromData.features;
   testimonials: Testimonial[] = fromData.testimonials;
+
+  constructor() {
+    setTimeout(() => {
+      window.scrollTo(0, document.body.scrollHeight);
+    }, 100);
+  }
 }

@@ -6,28 +6,33 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <div class="container">
       <div
-        class="mt-20 flex flex-col justify-center items-center lg:flex-row lg:justify-between"
+        class="flex flex-col justify-center items-center lg:flex-row lg:justify-between"
       >
+        <!-- pattern -->
         <div class="max-w-xl lg:order-last">
           <img
             src="/assets/images/illustration-intro.svg"
             alt="Illustration Intro"
           />
         </div>
+        <!-- end pattern -->
 
-        <div class="max-w-md flex justify-center flex-col lg:text-left">
+        <div class="max-w-md flex justify-center flex-col text-center lg:text-left">
+          <!-- hero text -->
           <h1
-            class="text-skin-base mt-6 text-3xl font-bold text-center text-gray-900 lg:text-5xl lg:text-left"
+            class="mt-6 text-3xl font-bold  tracking-wider lg:text-5xl lg:text-left"
           >
             Bring everyone together to build better products.
           </h1>
-          <p class="text-skin-muted text-center mt-6 lg:text-lg lg:text-left">
+          <!-- end hero text -->
+
+          <p class="text-muted mt-2 lg:text-lg lg:text-left">
             Manager makes it simple for software teams to plan day-to-day tasks
             while keeping the larger team goals in view.
           </p>
 
           <!--    get started-->
-          <div class="mt-10 mx-auto shake-little lg:ml-0">
+          <div class="mt-10 mx-auto lg:ml-0">
             <a class="btn btn-primary" href="#">Get started</a>
           </div>
           <!--    end get started-->

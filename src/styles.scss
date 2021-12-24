@@ -1,34 +1,42 @@
-// @import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
-// @import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+@import 'node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
 @layer base {
   :root {
+    // bright red
+    --color-primary: 12, 88%, 59%;
+
     //color text
+    // very dark blue
+    --text-fill: 233, 12%, 13%;
+    // Bright Red
     --text-primary: 12, 88%, 59%;
-    --text-base: 233, 12%, 13%;
+    // dark grayish blue
     --text-muted: 227, 12%, 61%;
+    // white
     --text-inverted: 0, 0%, 98%;
 
     //color background
-    --bg-fill: 0, 0%, 98%;
-    --bg-muted: 13, 100%, 96%;
+    // very light gray
+    --bg-fill: 0, 0%, 100%;
+    --bg-muted: 0, 0%, 98%;
     --bg-footer: 233, 12%, 13%;
     --primary: 12, 88%, 59%;
-    --primary-800: 12, 88%, 59%;
+    --primary-300: 13, 100%, 96%;
   }
 }
 
 @layer components {
   //CUSTOM APPLY HERE
   .btn {
-    @apply inline-block rounded-full px-5 py-3 text-xs font-black lg:text-base shadow-lg;
+    @apply inline-block rounded-full px-10 py-4 text-sm font-black tracking-wide lg:text-base shadow-lg;
   }
 
   .btn-primary {
-    @apply bg-primary-800 text-inverted;
+    @apply bg-primary text-inverted shadow-md shadow-primary;
   }
 
   .btn-primary-inverted {

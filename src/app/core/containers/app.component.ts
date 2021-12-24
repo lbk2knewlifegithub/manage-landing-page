@@ -19,7 +19,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
       <lbk-header></lbk-header>
 
-      <!-- <router-outlet></router-outlet> -->
+      <router-outlet></router-outlet>
 
       <!--footer-->
       <!-- <lbk-footer></lbk-footer> -->

@@ -1,23 +1,59 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+  ViewChild
+} from '@angular/core';
+import {
+  CarouselComponent,
+  OwlOptions,
+  SlidesOutputData
+} from 'ngx-owl-carousel-o';
+import { Testimonial } from '../models';
 
 @Component({
   selector: 'lbk-testimonial-list',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="container">
-      <div class="px-6 flex flex-col justify-center aligns-center">
+    <div class="">
+      <div class="space-y-10 justify-center aligns-center">
         <!--  title-->
-        <h2 class="text-skin-base text-2xl font-bold text-center lg:text-4xl">
+        <h2 class="text-3xl font-black text-center lg:text-4xl">
           What they've said
         </h2>
         <!--  end title-->
 
         <!--  carousel-->
-        <!-- <owl-carousel-o class="block mt-10" [options]="customOptions">
-          <ng-container *ngFor="let customer of customers">
-            <ng-template carouselSlide> </ng-template>
-          </ng-container>
-        </owl-carousel-o> -->
+        <div class="space-y-6">
+          <owl-carousel-o
+            #owl
+            (translated)="onOwlChange($event)"
+            class="block"
+            [options]="customOptions"
+          >
+            <ng-container *ngFor="let testimonial of testimonials">
+              <ng-template carouselSlide>
+                <lbk-testimonial-preview
+                  class="block"
+                  [testimonial]="testimonial"
+                ></lbk-testimonial-preview>
+              </ng-template>
+            </ng-container>
+          </owl-carousel-o>
+
+          <!-- dots -->
+          <ul class="flex gap-2 justify-center">
+            <ng-container *ngFor="let testimonial of testimonials; index as i">
+              <li
+                (click)="moveTo(i)"
+                [ngClass]="{ 'bg-primary': isActive(i) }"
+                class="duration-700 w-3 h-3 border border-primary rounded-full"
+              ></li>
+            </ng-container>
+          </ul>
+          <!-- end dots -->
+        </div>
         <!--  end carousel-->
 
         <!--  get started-->
@@ -27,4 +63,49 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     </div>
   `,
 })
-export class TestimonialListComponent {}
+export class TestimonialListComponent implements OnInit {
+  @Input() testimonials!: Testimonial[];
+  @ViewChild('owl', { static: true }) owl!: CarouselComponent;
+  currentSlide = 0;
+
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    autoplayTimeout: 5000,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      400: {
+        items: 2,
+      },
+      740: {
+        items: 3,
+      },
+      940: {
+        items: 4,
+      },
+    },
+  };
+
+  ngOnInit(): void {
+    setTimeout(() => {}, 100);
+  }
+
+  moveTo(index: number) {
+    this.owl.to(`owl-slide-${index}`);
+  }
+
+  isActive(index: number) {
+    return this.currentSlide === index;
+  }
+
+  onOwlChange(event: SlidesOutputData) {
+    this.currentSlide = event.startPosition ?? 0;
+  }
+}

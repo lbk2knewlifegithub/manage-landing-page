@@ -1,4 +1,5 @@
 const plugin = require("tailwindcss/plugin");
+const defaultTheme = require("tailwindcss/defaultTheme");
 const { join } = require("path");
 
 function withOpacity(variableName) {
@@ -23,6 +24,13 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        primary: withOpacity("--color-primary"),
+      },
+      // create custom fonts here
+      fontFamily: {
+        mono: ["'Be Vietnam Pro'", ...defaultTheme.fontFamily.mono],
+      },
       // create custom text colors here
       textColor: {
         primary: withOpacity("--text-accent"),
@@ -35,8 +43,8 @@ module.exports = {
         fill: withOpacity("--bg-fill"),
         footer: withOpacity("--bg-footer"),
         muted: withOpacity("--bg-muted"),
-        primary: withOpacity("--primary-800"),
-        "primary-800": withOpacity("--primary-800"),
+        primary: withOpacity("--primary"),
+        "primary-300": withOpacity("--primary-300"),
       },
     },
   },

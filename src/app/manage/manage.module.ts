@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import {
   FeatureListComponent,
   IntroComponent,
@@ -21,7 +22,7 @@ const COMPONENTS = [
 const CONTAINERS = [ManagePageComponent];
 
 @NgModule({
-  imports: [CommonModule, ManageRoutingModule],
+  imports: [CommonModule, ManageRoutingModule, CarouselModule],
   declarations: [COMPONENTS, CONTAINERS],
 })
 export class ManageModule {}
