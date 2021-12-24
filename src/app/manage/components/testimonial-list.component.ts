@@ -19,7 +19,7 @@ import { Testimonial } from '../models';
     <div class="">
       <div class="">
         <!--  title-->
-        <h2 class="text-3xl font-bold text-center lg:text-4xl">
+        <h2 data-aos="zoom-in" class="text-3xl font-bold text-center lg:text-4xl">
           What they've said
         </h2>
         <!--  end title-->
@@ -57,7 +57,7 @@ import { Testimonial } from '../models';
         <!--  end carousel-->
 
         <!--  get started-->
-        <div class="mt-8 grid place-items-center lg:mt-14">
+        <div data-aos="zoom-in" class="mt-8 grid place-items-center lg:mt-14">
           <a class="btn btn-primary " href="#">Get Started</a>
         </div>
         <!--  end get started-->

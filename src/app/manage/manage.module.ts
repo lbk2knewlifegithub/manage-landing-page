@@ -5,6 +5,7 @@ import {
   CtaComponent,
   FeatureListComponent,
   IntroComponent,
+  PatternMiddleComponent,
   TestimonialPreviewComponent
 } from './components';
 import { FeaturePreviewComponent } from './components/feature-preview.component';
@@ -19,6 +20,7 @@ const COMPONENTS = [
   TestimonialPreviewComponent,
   TestimonialListComponent,
   CtaComponent,
+  PatternMiddleComponent,
 ];
 
 const CONTAINERS = [ManagePageComponent];

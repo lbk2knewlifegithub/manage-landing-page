@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'lbk-cta',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="relative text-white bg-primary py-32 lg:py-20">
+    <div class=" relative text-white bg-primary py-32 lg:py-20">
       <!--    Background mobile-->
       <img
         class="absolute top-0 left-0 h-full lg:hidden"

@@ -5,7 +5,8 @@ import { Feature, Testimonial } from '../models';
 @Component({
   selector: 'lbk-manage-page',
   template: `
-    <div class="">
+    <main class="relative">
+
       <!-- intro -->
       <lbk-intro class="block mt-14 xl:mt-20"></lbk-intro>
       <!-- end intro -->
@@ -27,7 +28,7 @@ import { Feature, Testimonial } from '../models';
       <!-- call to action -->
       <lbk-cta data-aos="fade-in" data-aos="" class="block mt-16"></lbk-cta>
       <!-- end call to action -->
-    </div>
+    </main>
   `,
 })
 export class ManagePageComponent {

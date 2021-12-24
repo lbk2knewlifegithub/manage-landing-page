@@ -1,7 +1,8 @@
 import {
   LinksComponent,
   MenuComponent,
-  ModalLinksComponent
+  ModalLinksComponent,
+  PatternTopComponent
 } from './components';
 import { HeaderComponent } from './header.component';
 
@@ -10,4 +11,5 @@ export const COMPONENTS = [
   ModalLinksComponent,
   LinksComponent,
   MenuComponent,
+  PatternTopComponent
 ];

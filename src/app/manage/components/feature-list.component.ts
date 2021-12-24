@@ -4,14 +4,20 @@ import { Feature } from '../models';
 @Component({
   selector: 'lbk-feature-list',
   template: `
-    <div class="container grid gap-10 lg:grid-cols-2 lg:gap-6 ">
+    <lbk-pattern-middle></lbk-pattern-middle>
+
+    <div
+      class="relative container grid gap-10 lg:grid-cols-2 lg:gap-20 overflow-hidden"
+    >
       <!-- title -->
       <div class="-px-3 space-y-4 text-center lg:text-left">
         <h1 class="font-bold text-3xl lg:text-4xl">
           What's different about Manager?
         </h1>
 
-        <p class="max-w-md mx-auto  text-muted leading-7 lg:mr-auto lg:ml-0 lg:max-w-sm">
+        <p
+          class="max-w-md mx-auto  text-muted leading-7 lg:mr-auto lg:ml-0 lg:max-w-sm"
+        >
           Manager provides all the functionally your team need, without the
           complexity. Our software is tailor-made for modern digital products
           teams.
@@ -22,7 +28,7 @@ import { Feature } from '../models';
       <ul class="space-y-10">
         <ng-container *ngFor="let feature of features; index as i">
           <lbk-feature-preview
-            data-aos="slide-left"
+            data-aos="zoom-in-right"
             class="block"
             [index]="i"
             [feature]="feature"

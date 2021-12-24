@@ -22,16 +22,12 @@ import * as AOS from 'aos';
     <router-outlet></router-outlet>
 
     <!--footer-->
-    <lbk-footer ></lbk-footer>
+    <lbk-footer></lbk-footer>
     <!--end footer-->
   `,
 })
 export class AppComponent implements OnInit {
   ngOnInit(): void {
-    AOS.init({
-      offset: 100,
-      duration: 500,
-      once: true
-    });
+    AOS.init({ duration: 700 });
   }
 }

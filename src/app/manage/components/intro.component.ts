@@ -4,7 +4,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'lbk-intro',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="container">
+    <div class="relative container">
+
       <div
         class="grid place-content-center place-items-center gap-8 lg:grid-cols-2 lg:place-items-start"
       >
@@ -18,7 +19,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         <!-- end pattern -->
 
         <div
-        data-aos="slide-right"
+          data-aos="slide-right"
           class="max-w-lg grid place-content-center gap-10 text-center lg:text-left lg:place-items-start lg:mt-10 lg:gap-20"
         >
           <div>
@@ -37,7 +38,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
           </div>
 
           <!--    get started-->
-          <div class="">
+          <div data-aos="zoom-in-right" data-aos-delay="600">
             <a class="btn btn-primary" routerLink="/">Get started</a>
           </div>
           <!--    end get started-->

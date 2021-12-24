@@ -8,6 +8,7 @@ import {
   Output
 } from '@angular/core';
 import { listAnimation } from '@lbk/shared/animations';
+import { UnsubscribeComponent } from '@lbk/shared/components';
 import {
   fadeInOnEnterAnimation,
   fadeOutOnLeaveAnimation,
@@ -76,20 +77,25 @@ import { debounceTime, fromEvent } from 'rxjs';
     listAnimation({ delayEnter: 600 }),
   ],
 })
-export class ModalLinksComponent implements OnInit {
+export class ModalLinksComponent
+  extends UnsubscribeComponent
+  implements OnInit
+{
   @Input() open!: boolean;
   @Output() openChange = new EventEmitter<boolean>();
 
-  constructor(private readonly _cd: ChangeDetectorRef) {}
+  constructor(private readonly _cd: ChangeDetectorRef) {
+    super();
+  }
 
   ngOnInit(): void {
-    fromEvent(window, 'scroll')
+    this.appendSub = fromEvent(window, 'scroll')
       .pipe(debounceTime(200))
       .subscribe(() => {
         if (this.open) this.close();
       });
 
-    fromEvent(window, 'click').subscribe((event: Event) => {
+    this.appendSub = fromEvent(window, 'click').subscribe((event: Event) => {
       const target = event.target as HTMLElement;
       const matched = target.matches('#menu');
       if (matched) return;

@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'lbk-social',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <ul>
+    <ul data-aos="zoom-in">
       <li>
         <a routerLink="/"><span class="fab fa-facebook-square"></span></a>
       </li>
