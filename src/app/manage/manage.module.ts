@@ -26,7 +26,11 @@ const COMPONENTS = [
 const CONTAINERS = [ManagePageComponent];
 
 @NgModule({
-  imports: [CommonModule, ManageRoutingModule, CarouselModule],
+  imports: [
+    CommonModule,
+    ManageRoutingModule,
+    CarouselModule,
+  ],
   declarations: [COMPONENTS, CONTAINERS],
 })
 export class ManageModule {}
