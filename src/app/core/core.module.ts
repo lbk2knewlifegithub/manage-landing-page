@@ -1,26 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import {
-  CopyrightComponent,
-  FooterComponent,
-  FooterLinksComponent,
-  HeaderComponent,
-  SocialComponent
-} from './components';
-import { InboxComponent } from './components/inbox.component';
+import { fromFooter, fromHeader } from './components';
 import { AppComponent } from './containers';
 
-const COMPONENTS = [
-  // footer
-  FooterComponent,
-  FooterLinksComponent,
-  SocialComponent,
-  CopyrightComponent,
-  InboxComponent,
-  // header
-  HeaderComponent,
-];
+const COMPONENTS = [fromFooter.COMPONENTS, fromHeader.COMPONENTS];
 const CONTAINERS = [AppComponent];
 
 @NgModule({

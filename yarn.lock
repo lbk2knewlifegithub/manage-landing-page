@@ -121,10 +121,10 @@
     ora "5.4.1"
     rxjs "6.6.7"
 
-"@angular/animations@~13.0.0":
-  version "13.0.3"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-13.0.3.tgz#3d93f8ff2afe628aa9f6e27f992a97403ed8b6d2"
-  integrity sha512-wGhUzbf8tOHwNx/8JK3RIUisunayENj1j7aSlm8yrBoawvNdgCQVESyZdtfHxHuScRSpzxSIWdMggZ4G4+DuFg==
+"@angular/animations@^13.1.1":
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-13.1.1.tgz#13adfd4d8c2fbf36b87b1b6714ed5121267ea092"
+  integrity sha512-6ECC9Dn5gmV4U1cz1pRJ2p5lo0BET2CjG1RbhTaZR8lOsoMsmlV/JdBAp8eyYTiGii3MLS6Q2P/hN/YG2SRGQQ==
   dependencies:
     tslib "^2.3.0"
 
@@ -1668,6 +1668,13 @@ ajv@^8.0.0, ajv@^8.8.0:
     json-schema-traverse "^1.0.0"
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
+
+angular-animations@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/angular-animations/-/angular-animations-0.11.0.tgz#1c36cad9e280c0d9b4ad5fe61a1ddeee517a6a6e"
+  integrity sha512-P2RuOe+T97bhgGDLtOYK9V45QA5y+kFUxoJfRAua8Ymo0bI5lWyw8oiVmBoEIZUU+nooYoJvQXgVKuZJA7/z3g==
+  dependencies:
+    tslib "^2.0.0"
 
 ansi-colors@4.1.1:
   version "4.1.1"

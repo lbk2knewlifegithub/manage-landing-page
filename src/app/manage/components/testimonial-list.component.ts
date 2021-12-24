@@ -100,7 +100,7 @@ export class TestimonialListComponent implements OnInit {
   }
 
   moveTo(index: number) {
-    this.owl.to(`owl-slide-${index}`);
+    // this.owl.to(`owl-slide-${index}`);
   }
 
   isActive(index: number) {
